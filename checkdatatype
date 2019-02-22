@@ -1,0 +1,90 @@
+//function starts here
+function checkDataType(input){
+
+ //if statement to check array and array object
+ 
+    if(toString.call(input) === "[object Array]"){
+      //nested if statement to check whether an array object
+        if(typeof(input[0])==="object"){
+          console.log("array of object");
+          input.map((input,i)=>{console.log(input);})
+      }
+      else{
+          console.log("array");
+          input.map((input,i)=>{console.log(input);})
+      }
+  }
+ 
+ // else if to check number and NaN
+ 
+ else if(typeof(input)=="number"){
+    //nested if to chech NaN
+    if(isNaN(input)){
+        console.log("NaN")
+    }
+    else{
+    console.log("number:"+input);
+    }
+  }
+ 
+ // else if to check string
+ 
+ else if(typeof(input)=="string"){
+    console.log("string:"+input);
+  }
+ 
+ // else if to check boolean
+ 
+ else if(typeof(input)=="boolean"){
+    console.log("boolean:"+input);
+  }
+ 
+ // else if to check null
+ 
+ else if(input=== null){
+    console.log("null");
+  }
+ 
+ // else if to check undefined
+ 
+ else if(input=== undefined ){
+      console.log("undefined");
+  }
+ 
+ // else if to check function
+ 
+ else if(typeof(input)=="function"){
+    console.log("function:"+input);
+  }
+ 
+ // else if to check object
+ 
+ else if(typeof(input)=="object"){
+    console.log("object:"+input);
+  }
+
+}
+
+// list of test case inputs
+
+var a="string_input";
+var b=1234;
+var c=true;
+var d=null;
+var e;
+var f={"key":"value"}
+var g=[1,2,3,4]
+var h=[{"key1":"value1"},{"key2":"value2"},{"key3":"value3"}]
+var i=function(){}
+var j=NaN;
+
+checkDataType(a);
+checkDataType(b);
+checkDataType(c);
+checkDataType(d);
+checkDataType(e);
+checkDataType(f);
+checkDataType(g);
+checkDataType(h);
+checkDataType(i);
+checkDataType(j);
