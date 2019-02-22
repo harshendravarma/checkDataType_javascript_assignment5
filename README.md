@@ -1,1 +1,1 @@
-# checkDataType_javascript_assignment5
+It is a javascript code to check a varible data type
